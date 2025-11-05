@@ -1,0 +1,801 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>NowDMC — Destination Management in Thailand & Indonesia</title>
+
+  <meta name="description" content="NowDMC — a division of Now Comms Asia — delivers destination management in Thailand and Indonesia. From Bangkok to Bandung, we create unforgettable incentive, meeting, and gala experiences with world-class precision." />
+
+  <meta name="theme-color" content="#FF6A00" />
+
+ 
+
+  <!-- Open Graph / Twitter -->
+
+  <meta property="og:title" content="NowDMC — Destination Management in Thailand & Indonesia" />
+
+  <meta property="og:description" content="From Bangkok to Bali (and Bandung), we craft seamless destination experiences for global brands." />
+
+  <meta property="og:type" content="website" />
+
+  <meta property="og:url" content="https://nowdmc.com/" />
+
+  <meta property="og:image" content="/images/og-nowdmc.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+ 
+
+  <!-- Schema.org: Organization -->
+
+  <script type="application/ld+json">
+
+  {
+
+    "@context": "https://schema.org",
+
+    "@type": "Organization",
+
+    "name": "NowDMC",
+
+    "url": "https://nowdmc.com/",
+
+    "logo": "images/logo-nowdmc.png",
+
+    "parentOrganization": {
+
+      "@type": "Organization",
+
+      "name": "Now Comms Asia",
+
+      "url": "https://www.nowcomms.asia"
+
+    },
+
+    "sameAs": ["https://www.nowcomms.asia"]
+
+  }
+
+  </script>
+
+ 
+
+  <!-- TailwindCSS CDN (no build step for MVP) -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+
+    /* Simple fade-in */
+
+    .fade-in { animation: fadeIn 0.7s ease-out both; }
+
+    @keyframes fadeIn { from{opacity:0; transform:translateY(4px)} to{opacity:1; transform:translateY(0)} }
+
+  </style>
+
+</head>
+
+<body class="text-slate-900 bg-white">
+
+  <!-- Sticky Nav -->
+
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+
+      <a href="#home" class="flex items-center gap-2 font-semibold">
+
+        <img src="images/logo-nowdmc.png" alt="NowDMC logo" class="h-10 w-auto" />
+
+        <!--<span>NowDMC</span>-->
+
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+
+        <a href="#destinations" class="hover:text-orange-600">Destinations</a>
+
+        <a href="#experiences" class="hover:text-orange-600">Experiences</a>
+
+        <a href="#case-studies" class="hover:text-orange-600">Case Studies</a>
+
+        <a href="#services" class="hover:text-orange-600">Services</a>
+
+        <a href="#about" class="hover:text-orange-600">About</a>
+
+        <a href="#contact" class="inline-flex items-center rounded-full bg-orange-600 px-4 py-2 text-white hover:bg-orange-700">Plan Your Event</a>
+
+      </nav>
+
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded border border-slate-300" aria-label="Open menu">☰</button>
+
+    </div>
+
+    <!-- Mobile menu -->
+
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-100">
+
+      <nav class="px-4 py-3 space-y-2 text-sm">
+
+        <a href="#destinations" class="block">Destinations</a>
+
+        <a href="#experiences" class="block">Experiences</a>
+
+        <a href="#case-studies" class="block">Case Studies</a>
+
+        <a href="#services" class="block">Services</a>
+
+        <a href="#about" class="block">About</a>
+
+        <a href="#contact" class="block">Plan Your Event</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+ 
+
+  <!-- Hero -->
+
+  <section id="home" class="relative isolate">
+
+    <div class="relative grid lg:grid-cols-2 items-stretch">
+
+      <div class="order-2 lg:order-1 p-8 md:p-16 flex flex-col justify-center gap-6 fade-in">
+
+        <h1 class="text-3xl md:text-5xl font-semibold leading-tight">From Bangkok to Bali, we craft seamless destination experiences for global brands.</h1>
+
+        <p class="text-slate-600">NowDMC — a division of <a href="https://www.nowcomms.asia" class="text-orange-700 underline" target="_blank" rel="noopener">Now Comms Asia</a>.</p>
+
+        <div class="flex gap-3">
+
+          <a href="#contact" class="inline-flex items-center rounded-full bg-orange-600 px-5 py-3 text-white hover:bg-orange-700">Plan Your Event</a>
+
+          <a href="#destinations" class="inline-flex items-center rounded-full border px-5 py-3 border-slate-300 hover:border-orange-600">Explore Destinations</a>
+
+        </div>
+
+        <p class="text-sm text-slate-500">Motivation over Medium. Destination over Distance.</p>
+
+      </div>
+
+      <div class="order-1 lg:order-2 min-h-[40vh] lg:min-h-[70vh] bg-slate-200">
+
+        <!-- Hero placeholder image/video -->
+
+        <img src="images/hero-bangkok-bali.jpg" alt="Bangkok skyline and Bali cliffs" class="w-full h-full object-cover" />
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- What We Do -->
+
+  <section class="py-16 md:py-24 border-t border-slate-100">
+
+    <div class="mx-auto max-w-7xl px-4">
+
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+
+        <div class="p-6">
+
+          <div class="text-3xl mb-3">✈️</div>
+
+          <h3 class="font-semibold text-lg">Incentives</h3>
+
+          <p class="text-slate-600">Reward. Inspire. Motivate. Unforgettable journeys for top performers.</p>
+
+        </div>
+
+        <div class="p-6">
+
+          <div class="text-3xl mb-3">🏛️</div>
+
+          <h3 class="font-semibold text-lg">Meetings & Conferences</h3>
+
+          <p class="text-slate-600">Strategy and stage, seamlessly delivered across Thailand and Indonesia.</p>
+
+        </div>
+
+        <div class="p-6">
+
+          <div class="text-3xl mb-3">🎉</div>
+
+          <h3 class="font-semibold text-lg">Gala & Celebration</h3>
+
+          <p class="text-slate-600">Elegant evenings designed to connect and celebrate success.</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- Destinations -->
+
+  <section id="destinations" class="py-16 md:py-24 bg-slate-50">
+
+    <div class="mx-auto max-w-7xl px-4">
+
+      <div class="mb-10">
+
+        <h2 class="text-2xl md:text-4xl font-semibold">Destinations</h2>
+
+        <p class="text-slate-600 mt-2">Thailand and Indonesia — from city skylines to island sunsets and highland retreats.</p>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- Thailand card -->
+
+        <a href="#thailand" class="group relative overflow-hidden rounded-2xl shadow-sm bg-white border border-slate-200">
+
+          <img src="https://placehold.co/700x256?text=Thailand+placeholder" alt="Thailand rooftop and beach (placeholder)" class="h-64 w-full object-cover group-hover:scale-[1.02] transition" width="1200" height="256" />
+
+          <div class="p-6">
+
+            <h3 class="text-xl font-semibold">Thailand</h3>
+
+            <p class="text-slate-600">Bangkok • Phuket • Chiang Mai • Hua Hin</p>
+
+            <p class="mt-2 text-slate-600">Incentive perfection: rooftop galas, cultural immersion, private island dinners.</p>
+
+          </div>
+
+        </a>
+
+        <!-- Indonesia card -->
+
+        <a href="#indonesia" class="group relative overflow-hidden rounded-2xl shadow-sm bg-white border border-slate-200">
+
+          <img src="https://placehold.co/700x256?text=Indonesia+placeholder" alt="Bali cliffs and tea hills of Bandung (placeholder)" class="h-64 w-full object-cover group-hover:scale-[1.02] transition" width="1200" height="256" />
+
+          <div class="p-6">
+
+            <h3 class="text-xl font-semibold">Indonesia</h3>
+
+            <p class="text-slate-600">Bali • Jakarta • Bandung • Yogyakarta</p>
+
+            <p class="mt-2 text-slate-600">Islands of inspiration: clifftop luxury, creative highlands, and city energy.</p>
+
+          </div>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- Thailand detail anchor -->
+
+  <section id="thailand" class="py-16 md:py-24">
+
+    <div class="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-10 items-center">
+
+      <div>
+
+        <h2 class="text-2xl md:text-4xl font-semibold">Thailand — Where incentives inspire and experiences connect.</h2>
+
+        <p class="text-slate-600 mt-4">From the vibrant energy of Bangkok to the serenity of Chiang Mai and the beachside elegance of Phuket, Thailand delivers experiences that blend culture, creativity, and connection.</p>
+
+        <div class="mt-6 space-y-2">
+
+          <p><strong>Bangkok:</strong> luxury hotels, rooftop venues, cultural depth.</p>
+
+          <p><strong>Phuket:</strong> beachside perfection for incentive rewards.</p>
+
+          <p><strong>Chiang Mai:</strong> mountain calm for CSR and wellness.</p>
+
+          <p><strong>Hua Hin:</strong> seaside sophistication, close to Bangkok.</p>
+
+        </div>
+
+        <div class="mt-8">
+
+          <h3 class="font-semibold text-lg">Incentive Travel in Thailand</h3>
+
+          <p class="text-slate-600 mt-2">Private yacht lunches, temple-blessing ceremonies, rooftop celebrations, and CSR retreats — NowDMC manages every detail from logistics and entertainment to venue and on-ground operations.</p>
+
+          <a href="#contact" class="mt-4 inline-flex items-center rounded-full bg-orange-600 px-5 py-3 text-white hover:bg-orange-700">Start Planning Your Incentive</a>
+
+        </div>
+
+      </div>
+
+      <div class="grid gap-4">
+
+        <img src="https://placehold.co/700x256?text=Thailand+placeholder" alt="Bangkok rooftop gala" class="rounded-xl w-full h-64 object-cover" />
+
+        <div class="grid grid-cols-2 gap-4">
+
+          <img src="https://placehold.co/700x256?text=Thailand+placeholder" alt="Thai cultural performance" class="rounded-xl h-48 w-full object-cover" />
+
+          <img src="https://placehold.co/700x256?text=Thailand+placeholder" alt="Phuket beach dinner" class="rounded-xl h-48 w-full object-cover" />
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- Indonesia detail anchor -->
+
+  <section id="indonesia" class="py-16 md:py-24 bg-slate-50">
+
+    <div class="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-10 items-center">
+
+      <div class="order-2 lg:order-1 grid gap-4">
+
+        <img src="/images/id-indonesia-1.jpg" alt="Bali clifftop dinner" class="rounded-xl w-full h-64 object-cover" />
+
+        <div class="grid grid-cols-2 gap-4">
+
+          <img src="/images/id-indonesia-2.jpg" alt="Bandung tea hills" class="rounded-xl h-48 w-full object-cover" />
+
+          <img src="/images/id-indonesia-3.jpg" alt="Jakarta conference" class="rounded-xl h-48 w-full object-cover" />
+
+        </div>
+
+      </div>
+
+      <div class="order-1 lg:order-2">
+
+        <h2 class="text-2xl md:text-4xl font-semibold">Indonesia — Islands of Inspiration.</h2>
+
+        <p class="text-slate-600 mt-4">From the energy of Jakarta to the tranquillity of Bali and the cool creativity of Bandung, Indonesia offers diversity, culture, and innovation for every event.</p>
+
+        <div class="mt-6 space-y-2">
+
+          <p><strong>Bali:</strong> clifftop luxury, beach galas, wellness escapes.</p>
+
+          <p><strong>Jakarta:</strong> modern business hubs and premium venues.</p>
+
+          <p><strong>Bandung:</strong> rising MICE destination with creative flair and mountain air.</p>
+
+          <p><strong>Yogyakarta:</strong> cultural depth and meaningful CSR extensions.</p>
+
+        </div>
+
+        <a href="#contact" class="mt-6 inline-flex items-center rounded-full bg-orange-600 px-5 py-3 text-white hover:bg-orange-700">Plan Your Indonesia Event</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- Experiences -->
+
+  <section id="experiences" class="py-16 md:py-24">
+
+    <div class="mx-auto max-w-7xl px-4">
+
+      <div class="mb-10">
+
+        <h2 class="text-2xl md:text-4xl font-semibold">Every experience, expertly orchestrated.</h2>
+
+        <p class="text-slate-600 mt-2">Incentives, meetings, galas, CSR and wellness — connecting business goals with emotional impact.</p>
+
+      </div>
+
+      <div class="grid md:grid-cols-5 gap-4">
+
+        <div class="rounded-xl border p-4 bg-white">
+
+          <h3 class="font-semibold">Incentives & Rewards</h3>
+
+          <p class="text-slate-600 text-sm mt-1">Luxury travel, authentic culture, shared discovery.</p>
+
+        </div>
+
+        <div class="rounded-xl border p-4 bg-white">
+
+          <h3 class="font-semibold">Meetings & Conferences</h3>
+
+          <p class="text-slate-600 text-sm mt-1">Creative staging and flawless execution.</p>
+
+        </div>
+
+        <div class="rounded-xl border p-4 bg-white">
+
+          <h3 class="font-semibold">Galas & Celebrations</h3>
+
+          <p class="text-slate-600 text-sm mt-1">Elegant evenings and cultural showcases.</p>
+
+        </div>
+
+        <div class="rounded-xl border p-4 bg-white">
+
+          <h3 class="font-semibold">CSR & Team</h3>
+
+          <p class="text-slate-600 text-sm mt-1">Purpose-driven engagement with impact.</p>
+
+        </div>
+
+        <div class="rounded-xl border p-4 bg-white">
+
+          <h3 class="font-semibold">Wellness & Retreats</h3>
+
+          <p class="text-slate-600 text-sm mt-1">Leadership renewal in nature’s calm.</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- Case Studies (placeholder tiles linking to future pages) -->
+
+  <section id="case-studies" class="py-16 md:py-24 bg-slate-50">
+
+    <div class="mx-auto max-w-7xl px-4">
+
+      <div class="mb-10">
+
+        <h2 class="text-2xl md:text-4xl font-semibold">Real destinations. Real results.</h2>
+
+        <p class="text-slate-600 mt-2">Explore how global brands trust NowDMC — powered by Now Comms Asia — to deliver impact across Thailand and Indonesia.</p>
+
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="rounded-2xl overflow-hidden border bg-white">
+
+          <img src="/images/case-phuket.jpg" alt="Phuket incentive gala" class="h-48 w-full object-cover" />
+
+          <div class="p-5">
+
+            <h3 class="font-semibold">Phuket Incentive Journey</h3>
+
+            <p class="text-slate-600 text-sm">Private island gala for a global FMCG brand.</p>
+
+          </div>
+
+        </div>
+
+        <div class="rounded-2xl overflow-hidden border bg-white">
+
+          <img src="/images/case-bangkok.jpg" alt="Bangkok leadership summit" class="h-48 w-full object-cover" />
+
+          <div class="p-5">
+
+            <h3 class="font-semibold">Bangkok Leadership Summit</h3>
+
+            <p class="text-slate-600 text-sm">250-delegate conference with LED integration.</p>
+
+          </div>
+
+        </div>
+
+        <div class="rounded-2xl overflow-hidden border bg-white">
+
+          <img src="/images/case-bali.jpg" alt="Bali wellness retreat" class="h-48 w-full object-cover" />
+
+          <div class="p-5">
+
+            <h3 class="font-semibold">Bali Wellness Retreat</h3>
+
+            <p class="text-slate-600 text-sm">Leadership recognition and reflection programme.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- Services -->
+
+  <section id="services" class="py-16 md:py-24">
+
+    <div class="mx-auto max-w-7xl px-4">
+
+      <div class="mb-10">
+
+        <h2 class="text-2xl md:text-4xl font-semibold">From concept to curtain call.</h2>
+
+        <p class="text-slate-600 mt-2">Backed by <a href="https://www.nowcomms.asia" class="text-orange-700 underline" target="_blank" rel="noopener">Now Comms Asia</a>, we provide full-service destination management.</p>
+
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="rounded-xl border p-5 bg-white">
+
+          <h3 class="font-semibold">Concept & Design</h3>
+
+          <p class="text-slate-600 text-sm mt-1">Ideas shaped around purpose and audience.</p>
+
+        </div>
+
+        <div class="rounded-xl border p-5 bg-white">
+
+          <h3 class="font-semibold">Venue & Accommodation</h3>
+
+          <p class="text-slate-600 text-sm mt-1">Sourcing, contracting, and management.</p>
+
+        </div>
+
+        <div class="rounded-xl border p-5 bg-white">
+
+          <h3 class="font-semibold">Travel & Ground Logistics</h3>
+
+          <p class="text-slate-600 text-sm mt-1">Transfers, scheduling, VIP handling.</p>
+
+        </div>
+
+        <div class="rounded-xl border p-5 bg-white">
+
+          <h3 class="font-semibold">Production & AV</h3>
+
+          <p class="text-slate-600 text-sm mt-1">Creative technology and seamless delivery.</p>
+
+        </div>
+
+        <div class="rounded-xl border p-5 bg-white">
+
+          <h3 class="font-semibold">Cultural & Entertainment</h3>
+
+          <p class="text-slate-600 text-sm mt-1">Authentic performances and storytelling.</p>
+
+        </div>
+
+        <div class="rounded-xl border p-5 bg-white">
+
+          <h3 class="font-semibold">CSR & Wellness</h3>
+
+          <p class="text-slate-600 text-sm mt-1">Impactful programmes with meaning.</p>
+
+        </div>
+
+        <div class="rounded-xl border p-5 bg-white md:col-span-3">
+
+          <h3 class="font-semibold">Budget & ROI Management</h3>
+
+          <p class="text-slate-600 text-sm mt-1">Transparent financials and measurable outcomes.</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- About -->
+
+  <section id="about" class="py-16 md:py-24 bg-slate-50">
+
+    <div class="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-10 items-center">
+
+      <div>
+
+        <h2 class="text-2xl md:text-4xl font-semibold">A division of Now Comms Asia.</h2>
+
+        <p class="text-slate-600 mt-4">NowDMC is the destination management arm of <a href="https://www.nowcomms.asia" class="text-orange-700 underline" target="_blank" rel="noopener">Now Comms Asia</a> — a regional B2B marketing, events, and creative-tech agency headquartered in Singapore with teams in Thailand, Indonesia, Malaysia, and Japan.</p>
+
+        <p class="text-slate-600 mt-2">We bring global brand experience and local expertise together to deliver corporate events that are seamless, creative, and culturally resonant.</p>
+
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+
+        <img src="/images/about-1.jpg" alt="Bangkok river gala" class="rounded-xl h-40 w-full object-cover" />
+
+        <img src="/images/about-2.jpg" alt="Bali clifftop venue" class="rounded-xl h-40 w-full object-cover" />
+
+        <img src="/images/about-3.jpg" alt="Conference LED stage" class="rounded-xl h-40 w-full object-cover" />
+
+        <img src="/images/about-4.jpg" alt="CSR activity" class="rounded-xl h-40 w-full object-cover" />
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- Contact -->
+
+  <section id="contact" class="py-16 md:py-24">
+
+    <div class="mx-auto max-w-3xl px-4">
+
+      <div class="text-center mb-8">
+
+        <h2 class="text-2xl md:text-4xl font-semibold">Let’s design your next destination experience.</h2>
+
+        <p class="text-slate-600 mt-2">Share a few details and we’ll start shaping the perfect event in Thailand or Indonesia.</p>
+
+      </div>
+
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="grid gap-4">
+
+        <div class="grid md:grid-cols-2 gap-4">
+
+          <input class="border rounded-lg p-3" name="name" placeholder="Name" required />
+
+          <input class="border rounded-lg p-3" name="company" placeholder="Company" />
+
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+
+          <input class="border rounded-lg p-3" name="email" type="email" placeholder="Email" required />
+
+          <input class="border rounded-lg p-3" name="country" placeholder="Country" />
+
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+
+          <select class="border rounded-lg p-3" name="event_type">
+
+            <option value="">Event Type</option>
+
+            <option>Incentive</option>
+
+            <option>Conference/Meeting</option>
+
+            <option>Gala/Celebration</option>
+
+            <option>CSR/Team</option>
+
+            <option>Wellness/Retreat</option>
+
+          </select>
+
+          <select class="border rounded-lg p-3" name="destination">
+
+            <option value="">Destination</option>
+
+            <option>Thailand</option>
+
+            <option>Indonesia</option>
+
+            <option>Unsure</option>
+
+          </select>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+
+          <input class="border rounded-lg p-3" name="dates" placeholder="Estimated Dates" />
+
+          <input class="border rounded-lg p-3" name="group_size" placeholder="Group Size / Budget" />
+
+        </div>
+
+        <textarea class="border rounded-lg p-3" name="message" rows="5" placeholder="Tell us about your goals and any must-haves…"></textarea>
+
+        <button class="inline-flex justify-center rounded-full bg-orange-600 px-6 py-3 text-white hover:bg-orange-700">Submit Enquiry</button>
+
+      </form>
+
+      <div class="text-center mt-6 text-slate-600">
+
+        Prefer to talk? Email <a href="mailto:hello@nowdmc.com" class="underline">hello@nowdmc.com</a> • Offices in Bangkok, Bali & Singapore
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- Footer -->
+
+  <footer class="border-t border-slate-100 py-10">
+
+    <div class="mx-auto max-w-7xl px-4 grid md:grid-cols-3 gap-6 items-start">
+
+      <div>
+
+        <img src="/images/logo-nowdmc.png" alt="NowDMC logo" class="h-8 w-auto mb-3" />
+
+        <p class="text-slate-600 text-sm">NowDMC is the destination management division of <a href="https://www.nowcomms.asia" target="_blank" rel="noopener" class="underline text-orange-700">Now Comms Asia</a>.</p>
+
+      </div>
+
+      <div class="text-sm">
+
+        <h4 class="font-semibold mb-2">Destinations</h4>
+
+        <ul class="space-y-1">
+
+          <li><a href="#thailand" class="hover:text-orange-700">Thailand</a></li>
+
+          <li><a href="#indonesia" class="hover:text-orange-700">Indonesia</a></li>
+
+          <li><span class="text-slate-400">Bandung (via Indonesia)</span></li>
+
+        </ul>
+
+      </div>
+
+      <div class="text-sm">
+
+        <h4 class="font-semibold mb-2">Connect</h4>
+
+        <ul class="space-y-1">
+
+          <li><a href="#experiences" class="hover:text-orange-700">Experiences</a></li>
+
+          <li><a href="#services" class="hover:text-orange-700">Services</a></li>
+
+          <li><a href="#contact" class="hover:text-orange-700">Contact</a></li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 mt-8 text-xs text-slate-500">© <span id="year"></span> NowDMC. All rights reserved.</div>
+
+  </footer>
+
+ 
+
+  <script>
+
+    // Mobile menu toggle
+
+    const menuBtn = document.getElementById('menuBtn');
+
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn?.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
+
+    // Year
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+  </script>
+
+</body>
+
+</html>
