@@ -101,6 +101,37 @@
           </iframe>
         </div>
         <script src="https://player.vimeo.com/api/player.js"></script>
+      <script>
+  (function(){
+    const playBtn = document.getElementById('playThailandVideo');
+    const modal   = document.getElementById('thailandVideoModal');
+    const closeBtn= document.getElementById('closeThailandVideo');
+    const iframe  = document.getElementById('thailandVimeo');
+
+    if (!playBtn || !modal || !iframe || !window.Vimeo) return;
+
+    let thailandPlayer = null;
+    function player(){ return thailandPlayer ||= new Vimeo.Player(iframe); }
+
+    // Open: show modal, rewind, play
+    playBtn.addEventListener('click', async () => {
+      modal.classList.remove('hidden');
+      try {
+        await player().setCurrentTime(0);
+        await player().play();
+      } catch(e) { /* autoplay may be blocked; user can tap play */ }
+    });
+
+    // Close: hide modal, pause, rewind so it starts fresh next open
+    function closeModal(){
+      modal.classList.add('hidden');
+      player().pause().catch(()=>{});
+      player().setCurrentTime(0).catch(()=>{});
+    }
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  })();
+</script>
       </div>
     </div>
   </section>
@@ -202,10 +233,11 @@
   class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
   <div class="relative w-full max-w-3xl bg-white rounded-xl overflow-hidden shadow-xl">
     <button id="closeThailandVideo"
-      class="absolute top-2 right-3 text-slate-600 text-2xl hover:text-orange-600">&times;</button>
+      class="absolute top-2 right-3 text-slate-600 text-2xl hover:text-orange-600" aria-label="Close video">&times;</button>
     <div style="padding:56.25% 0 0 0;position:relative;">
       <iframe
-        src="https://player.vimeo.com/video/1134531846?autoplay=1&loop=0&muted=0"
+        id="thailandVimeo"
+        src="https://player.vimeo.com/video/1134531846?autoplay=0&loop=0&muted=0&autopause=0&playsinline=1"
         frameborder="0"
         allow="autoplay; fullscreen; picture-in-picture"
         allowfullscreen
@@ -215,7 +247,8 @@
     </div>
   </div>
 </div>
-
+<!-- CLOSE the mt-8 wrapper from above -->
+</div>
 <script>
   const playBtn = document.getElementById('playThailandVideo');
   const modal = document.getElementById('thailandVideoModal');
@@ -545,6 +578,7 @@
     © <span id="year"></span> Now Comms Asia. All rights reserved.
   </div>
 </footer>
+
 
 
 
