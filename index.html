@@ -134,35 +134,43 @@
   </section>
 
   <!-- Destinations -->
-  <section id="destinations" class="py-16 md:py-24 bg-slate-50">
-    <div class="grid md:grid-cols-3 gap-10 text-center">
-      <div class="mb-10">
-        <h2 class="text-2xl md:text-4xl font-semibold">Destinations</h2>
-        <p class="text-slate-600 mt-2">Thailand and Indonesia — from city skylines to island sunsets and highland retreats.</p>
-      </div>
-      <div class="grid md:grid-cols-2 gap-6">
-        <!-- Thailand card -->
-        <a href="#thailand" class="group relative overflow-hidden rounded-2xl shadow-sm bg-white border border-slate-200">
-          <img src="images/dest-thailand.jpg" alt="Thailand rooftop and beach" class="h-64 w-full object-cover group-hover:scale-[1.02] transition" loading="lazy" decoding="async" />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">Thailand</h3>
-            <p class="text-slate-600">Bangkok • Phuket • Chiang Mai • Hua Hin</p>
-            <p class="mt-2 text-slate-600">Incentive perfection: rooftop galas, cultural immersion, private island dinners.</p>
-          </div>
-        </a>
-        <!-- Indonesia card -->
-        <a href="#indonesia" class="group relative overflow-hidden rounded-2xl shadow-sm bg-white border border-slate-200">
-          <img src="images/dest-indonesia.jpg" alt="Bali Cliffs and Jakarta City" class="h-64 w-full object-cover group-hover:scale-[1.02] transition" loading="lazy" decoding="async" />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">Indonesia</h3>
-            <p class="text-slate-600">Bali • Jakarta • Bandung • Yogyakarta</p>
-            <p class="mt-2 text-slate-600">Islands of inspiration: clifftop luxury, creative highlands, and city energy.</p>
-          </div>
-        </a>
-      </div>
+<section id="destinations" class="py-16 md:py-24 bg-slate-50">
+  <div class="mx-auto max-w-7xl px-4">
+    <div class="mb-10">
+      <h2 class="text-2xl md:text-4xl font-semibold">Destinations</h2>
+      <p class="text-slate-600 mt-2">
+        Thailand and Indonesia — from city skylines to island sunsets and highland retreats.
+      </p>
     </div>
-  </section>
 
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Thailand card -->
+      <a href="#thailand" class="group relative overflow-hidden rounded-2xl shadow-sm bg-white border border-slate-200">
+        <img src="images/dest-thailand.jpg" alt="Thailand rooftop and beach" class="h-64 w-full object-cover group-hover:scale-[1.02] transition" loading="lazy" decoding="async" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Thailand</h3>
+          <p class="text-slate-600">Bangkok • Phuket • Chiang Mai • Hua Hin</p>
+          <p class="mt-2 text-slate-600">Incentive perfection: rooftop galas, cultural immersion, private island dinners.</p>
+        </div>
+      </a>
+
+      <!-- Indonesia card -->
+      <a href="#indonesia" class="group relative overflow-hidden rounded-2xl shadow-sm bg-white border border-slate-200">
+        <!-- Use ONE of these images depending on what exists in /images -->
+        <!-- If you have "dest-indonesia.jpg": -->
+        <img src="images/dest-indonesia.jpg" alt="Bali cliffs and Jakarta city" class="h-64 w-full object-cover group-hover:scale-[1.02] transition" loading="lazy" decoding="async" />
+        <!-- Otherwise fallback to "id-indonesia-2.jpg":
+        <img src="images/id-indonesia-2.jpg" alt="Bandung tea hills and Indonesian highlands" class="h-64 w-full object-cover group-hover:scale-[1.02] transition" loading="lazy" decoding="async" />
+        -->
+        <div class="p-6">
+          <h3 class="text-xl font-semibold">Indonesia</h3>
+          <p class="text-slate-600">Bali • Jakarta • Bandung • Yogyakarta</p>
+          <p class="mt-2 text-slate-600">Islands of inspiration: clifftop luxury, creative highlands, and city energy.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
   <!-- Thailand detail anchor -->
   <section id="thailand" class="py-16 md:py-24">
     <div class="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-10 items-center">
@@ -491,6 +499,7 @@
   </script>
 </body>
 </html>
+
 
 
 
