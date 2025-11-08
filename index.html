@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <link rel="icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NowDMC — Destination Management in Thailand & Indonesia</title>
@@ -15,15 +15,15 @@
   <meta property="og:description" content="From Bangkok to Bali (and Bandung), we craft seamless destination experiences for global brands." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nowdmc.com/" />
+  <meta property="og:image" content="https://nowdmc.com/images/og-nowdmc.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Preconnects for performance -->
+  <!-- Performance hints -->
   <link rel="preconnect" href="https://player.vimeo.com" />
   <link rel="preconnect" href="https://i.vimeocdn.com" />
   <link rel="preconnect" href="https://f.vimeocdn.com" />
   <link rel="preload" as="image" href="images/hero-landing.jpg" imagesrcset="images/hero-landing.jpg 1600w" imagesizes="100vw">
   <link rel="canonical" href="https://nowdmc.com/">
-<meta property="og:image" content="https://nowdmc.com/images/og-nowdmc.jpg" />
 
   <!-- Schema.org: Organization -->
   <script type="application/ld+json">
@@ -56,18 +56,22 @@
   <script defer src="https://player.vimeo.com/api/player.js"></script>
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RM4L7LFDEV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config','G-RM4L7LFDEV');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RM4L7LFDEV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config','G-RM4L7LFDEV');
+  </script>
 
   <style>
     .fade-in { animation: fadeIn 0.7s ease-out both; }
     @keyframes fadeIn { from{opacity:0; transform:translateY(4px)} to{opacity:1; transform:translateY(0)} }
     .hero-video { width:100%; height:100%; object-fit:cover; display:block; background:#e5e7eb; }
+    .sr-only {
+      position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+      clip:rect(0,0,0,0); white-space:nowrap; border:0;
+    }
   </style>
 </head>
 
@@ -87,15 +91,16 @@
         <a href="#about" class="hover:text-orange-600">About</a>
         <a href="#contact" class="inline-flex items-center rounded-full bg-orange-600 px-4 py-2 text-white hover:bg-orange-700">Plan Your Event</a>
       </nav>
-     <button
-  id="menuBtn"
-  class="md:hidden inline-flex items-center justify-center p-2 rounded border border-slate-300"
-  aria-label="Toggle menu"
-  aria-controls="mobileMenu"
-  aria-expanded="false"
->
-  ☰
-</button>
+      <button
+        id="menuBtn"
+        class="md:hidden inline-flex items-center justify-center p-2 rounded border border-slate-300"
+        aria-label="Toggle menu"
+        aria-controls="mobileMenu"
+        aria-expanded="false"
+        type="button"
+      >
+        ☰
+      </button>
     </div>
     <!-- Mobile menu -->
     <div id="mobileMenu" class="md:hidden hidden border-t border-slate-100">
@@ -153,19 +158,16 @@
   <section class="py-16 md:py-24 border-t border-slate-100">
     <div class="mx-auto max-w-7xl px-4">
       <div class="grid md:grid-cols-3 gap-8 text-center">
-        <!-- Incentives -->
         <div class="p-6">
           <img src="images/incentives-icon.png" alt="Incentives – experience different" class="mx-auto h-24 w-auto mb-4" loading="lazy" decoding="async" />
           <h3 class="font-semibold text-lg">Incentives</h3>
           <p class="text-slate-600">Reward. Inspire. Motivate. Unforgettable journeys for top performers.</p>
         </div>
-        <!-- Meetings & Conferences -->
         <div class="p-6">
           <img src="images/meeting-conference-icon.png" alt="Meetings and Conferences – connect different" class="mx-auto h-24 w-auto mb-4" loading="lazy" decoding="async" />
           <h3 class="font-semibold text-lg">Meetings & Conferences</h3>
           <p class="text-slate-600">Strategy and stage, seamlessly delivered across Thailand and Indonesia.</p>
         </div>
-        <!-- Gala & Celebrations -->
         <div class="p-6">
           <img src="images/gala-celebration-icon.png" alt="Gala and Celebrations – celebrate different" class="mx-auto h-24 w-auto mb-4" loading="lazy" decoding="async" />
           <h3 class="font-semibold text-lg">Gala & Celebrations</h3>
@@ -184,7 +186,6 @@
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <!-- Thailand card -->
         <a href="#thailand" class="group relative overflow-hidden rounded-2xl shadow-sm bg-white border border-slate-200">
           <img src="images/dest-thailand.jpg" alt="Thailand rooftop and beach" class="h-64 w-full object-cover group-hover:scale-[1.02] transition" loading="lazy" decoding="async" />
           <div class="p-6">
@@ -194,7 +195,6 @@
           </div>
         </a>
 
-        <!-- Indonesia card -->
         <a href="#indonesia" class="group relative overflow-hidden rounded-2xl shadow-sm bg-white border border-slate-200">
           <img src="images/dest-indonesia.jpg" alt="Bali cliffs and Jakarta city" class="h-64 w-full object-cover group-hover:scale-[1.02] transition" loading="lazy" decoding="async" />
           <div class="p-6">
@@ -208,84 +208,85 @@
   </section>
 
   <!-- Thailand detail anchor -->
-<section id="thailand" class="py-16 md:py-24">
-  <div class="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-10 items-center">
+  <section id="thailand" class="py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-10 items-center">
 
-    <!-- Left column: content and video -->
-    <div>
-      <h2 class="text-2xl md:text-4xl font-semibold">
-        Thailand — Where incentives inspire and experiences connect.
-      </h2>
-      <p class="text-slate-600 mt-4">
-        From the vibrant energy of Bangkok to the serenity of Chiang Mai and the beachside elegance of Phuket, Thailand delivers experiences that blend culture, creativity, and connection.
-      </p>
-
-      <div class="mt-6 space-y-2">
-        <p><strong>Bangkok:</strong> luxury hotels, rooftop venues, cultural depth.</p>
-        <p><strong>Phuket:</strong> beachside perfection for incentive rewards.</p>
-        <p><strong>Chiang Mai:</strong> mountain calm for CSR and wellness.</p>
-        <p><strong>Hua Hin:</strong> seaside sophistication, close to Bangkok.</p>
-      </div>
-
-      <div class="mt-8">
-        <h3 class="font-semibold text-lg">Incentive Travel in Thailand</h3>
-        <p class="text-slate-600 mt-2">
-          Private yacht lunches, temple-blessing ceremonies, rooftop celebrations, and CSR retreats — NowDMC manages every detail from logistics and entertainment to venue and on-ground operations.
+      <!-- Left column: content and video -->
+      <div>
+        <h2 class="text-2xl md:text-4xl font-semibold">
+          Thailand — Where incentives inspire and experiences connect.
+        </h2>
+        <p class="text-slate-600 mt-4">
+          From the vibrant energy of Bangkok to the serenity of Chiang Mai and the beachside elegance of Phuket, Thailand delivers experiences that blend culture, creativity, and connection.
         </p>
 
-        <a href="#contact" class="mt-4 inline-flex items-center rounded-full bg-orange-600 px-5 py-3 text-white hover:bg-orange-700">
-          Start Planning Your Incentive
-        </a>
-
-        <!-- Click to Learn More video button -->
-        <div class="mt-6">
-          <button
-            id="playThailandVideo"
-            class="inline-flex items-center gap-2 rounded-full border border-orange-600 text-orange-600 px-5 py-3 hover:bg-orange-600 hover:text-white transition"
-          >
-            ▶️ Learn More
-          </button>
+        <div class="mt-6 space-y-2">
+          <p><strong>Bangkok:</strong> luxury hotels, rooftop venues, cultural depth.</p>
+          <p><strong>Phuket:</strong> beachside perfection for incentive rewards.</p>
+          <p><strong>Chiang Mai:</strong> mountain calm for CSR and wellness.</p>
+          <p><strong>Hua Hin:</strong> seaside sophistication, close to Bangkok.</p>
         </div>
 
-        <!-- Modal with accessibility enhancements -->
-        <div id="thailandVideoModal"
-             class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
-             role="dialog"
-             aria-modal="true"
-             aria-labelledby="thailandVideoTitle">
-          <div class="relative w-full max-w-3xl bg-white rounded-xl overflow-hidden shadow-xl">
-            <button id="closeThailandVideo"
-                    class="absolute top-2 right-3 text-slate-600 text-2xl hover:text-orange-600"
-                    aria-label="Close video">&times;</button>
-            <h2 id="thailandVideoTitle" class="sr-only">Thailand Incentive Overview</h2>
-            <div style="padding:56.25% 0 0 0;position:relative;">
-              <iframe
-                id="thailandVimeo"
-                src="https://player.vimeo.com/video/1134531846?autoplay=0&loop=0&muted=0&autopause=0&playsinline=1&title=0&byline=0&portrait=0"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                title="Thailand Incentive Overview"
-                loading="lazy">
-              </iframe>
+        <div class="mt-8">
+          <h3 class="font-semibold text-lg">Incentive Travel in Thailand</h3>
+          <p class="text-slate-600 mt-2">
+            Private yacht lunches, temple-blessing ceremonies, rooftop celebrations, and CSR retreats — NowDMC manages every detail from logistics and entertainment to venue and on-ground operations.
+          </p>
+
+          <a href="#contact" class="mt-4 inline-flex items-center rounded-full bg-orange-600 px-5 py-3 text-white hover:bg-orange-700">
+            Start Planning Your Incentive
+          </a>
+
+          <!-- Click to Learn More video button -->
+          <div class="mt-6">
+            <button
+              id="playThailandVideo"
+              type="button"
+              class="inline-flex items-center gap-2 rounded-full border border-orange-600 text-orange-600 px-5 py-3 hover:bg-orange-600 hover:text-white transition"
+            >
+              ▶️ Learn More
+            </button>
+          </div>
+
+          <!-- Modal with accessibility enhancements -->
+          <div id="thailandVideoModal"
+               class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+               role="dialog"
+               aria-modal="true"
+               aria-labelledby="thailandVideoTitle">
+            <div class="relative w-full max-w-3xl bg-white rounded-xl overflow-hidden shadow-xl">
+              <button id="closeThailandVideo"
+                      class="absolute top-2 right-3 text-slate-600 text-2xl hover:text-orange-600"
+                      aria-label="Close video">&times;</button>
+              <h2 id="thailandVideoTitle" class="sr-only">Thailand Incentive Overview</h2>
+              <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe
+                  id="thailandVimeo"
+                  src="https://player.vimeo.com/video/1134531846?autoplay=0&loop=0&muted=0&autopause=0&playsinline=1&title=0&byline=0&portrait=0"
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                  title="Thailand Incentive Overview"
+                  loading="lazy">
+                </iframe>
+              </div>
             </div>
           </div>
+        </div> <!-- closes mt-8 wrapper -->
+      </div> <!-- closes left column -->
+
+      <!-- Right column: images -->
+      <div class="grid gap-4">
+        <img src="images/th-thailand-1.jpg" alt="Bangkok rooftop gala" class="rounded-xl w-full h-64 object-cover" loading="lazy" decoding="async" />
+        <div class="grid grid-cols-2 gap-4">
+          <img src="images/th-thailand-2.jpg" alt="Thai cultural performance" class="rounded-xl h-48 w-full object-cover" loading="lazy" decoding="async" />
+          <img src="images/th-thailand-3.jpg" alt="Phuket beach dinner" class="rounded-xl h-48 w-full object-cover" loading="lazy" decoding="async" />
         </div>
-      </div> <!-- closes mt-8 wrapper -->
-    </div> <!-- closes left column -->
-
-    <!-- Right column: images -->
-    <div class="grid gap-4">
-      <img src="images/th-thailand-1.jpg" alt="Bangkok rooftop gala" class="rounded-xl w-full h-64 object-cover" loading="lazy" decoding="async" />
-      <div class="grid grid-cols-2 gap-4">
-        <img src="images/th-thailand-2.jpg" alt="Thai cultural performance" class="rounded-xl h-48 w-full object-cover" loading="lazy" decoding="async" />
-        <img src="images/th-thailand-3.jpg" alt="Phuket beach dinner" class="rounded-xl h-48 w-full object-cover" loading="lazy" decoding="async" />
       </div>
-    </div>
 
-  </div>
-</section>
+    </div>
+  </section>
 
   <!-- Indonesia detail anchor -->
   <section id="indonesia" class="py-16 md:py-24 bg-slate-50">
@@ -445,7 +446,7 @@
       </div>
 
       <div class="text-center mt-12">
-        <button class="case-close inline-flex items-center rounded-full border px-6 py-3 hover:bg-slate-50">← Back to Case Studies</button>
+        <button class="case-close inline-flex items-center rounded-full border px-6 py-3 hover:bg-slate-50" type="button">← Back to Case Studies</button>
       </div>
     </div>
   </section>
@@ -482,7 +483,7 @@
       </div>
 
       <div class="text-center mt-12">
-        <button class="case-close inline-flex items-center rounded-full border px-6 py-3 hover:bg-slate-50">← Back to Case Studies</button>
+        <button class="case-close inline-flex items-center rounded-full border px-6 py-3 hover:bg-slate-50" type="button">← Back to Case Studies</button>
       </div>
     </div>
   </section>
@@ -552,7 +553,7 @@
         <p class="text-slate-600 mt-2">Share a few details and we’ll start shaping the perfect event in Thailand or Indonesia.</p>
       </div>
 
-      <!-- Formspree kept as requested -->
+      <!-- Formspree -->
       <form action="https://formspree.io/f/mzzknwkd" method="POST" class="grid gap-4">
         <div class="grid md:grid-cols-2 gap-4">
           <input class="border rounded-lg p-3" name="name" placeholder="Name" required />
@@ -598,7 +599,6 @@
   <!-- Footer -->
   <footer class="border-t border-slate-100 py-10">
     <div class="mx-auto max-w-7xl px-4 grid md:grid-cols-4 gap-6 items-start">
-      <!-- Left: NowDMC -->
       <div class="flex flex-col items-start">
         <img src="images/logo-nowdmc.png" alt="NowDMC logo" class="h-10 w-auto mb-3" />
         <p class="text-slate-600 text-sm">
@@ -607,7 +607,6 @@
         </p>
       </div>
 
-      <!-- Column 2: Destinations -->
       <div class="text-sm">
         <h4 class="font-semibold mb-2">Destinations</h4>
         <ul class="space-y-1">
@@ -616,7 +615,6 @@
         </ul>
       </div>
 
-      <!-- Column 3: Connect -->
       <div class="text-sm">
         <h4 class="font-semibold mb-2">Connect</h4>
         <ul class="space-y-1">
@@ -626,7 +624,6 @@
         </ul>
       </div>
 
-      <!-- Right: Now Comms Asia logo -->
       <div class="flex justify-end md:justify-end items-start">
         <a href="https://www.nowcomms.asia" target="_blank" rel="noopener">
           <img src="images/nowcommsasia-logo.png" alt="Now Comms Asia logo" class="h-20 w-auto hover:opacity-90 transition" loading="lazy" decoding="async" />
@@ -639,17 +636,15 @@
     </div>
   </footer>
 
-  <!-- Thailand modal player controls -->
+  <!-- Core UI behavior -->
   <script>
     // Mobile menu toggle (with accessibility)
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-
-menuBtn?.addEventListener('click', () => {
-  const isHidden = mobileMenu.classList.toggle('hidden');
-  const expanded = !isHidden;
-  menuBtn.setAttribute('aria-expanded', String(expanded));
-});
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!isHidden));
+    });
 
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -731,777 +726,40 @@ menuBtn?.addEventListener('click', () => {
       });
     })();
   </script>
-  <!doctype html>
-<html lang="en">
-<head>
-  <link rel="icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NowDMC — Destination Management in Thailand & Indonesia</title>
-  <meta name="description" content="NowDMC — a division of Now Comms Asia — delivers destination management in Thailand and Indonesia. From Bangkok to Bali, we create unforgettable incentive, meeting, and gala experiences with world-class precision." />
-  <meta name="theme-color" content="#FF6A00" />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="NowDMC — Destination Management in Thailand & Indonesia" />
-  <meta property="og:description" content="From Bangkok to Bali (and Bandung), we craft seamless destination experiences for global brands." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://nowdmc.com/" />
-  <meta property="og:image" content="images/og-nowdmc.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Preconnects for performance -->
-  <link rel="preconnect" href="https://player.vimeo.com" />
-  <link rel="preconnect" href="https://i.vimeocdn.com" />
-  <link rel="preconnect" href="https://f.vimeocdn.com" />
-  <link rel="preload" as="image" href="images/hero-landing.jpg" imagesrcset="images/hero-landing.jpg 1600w" imagesizes="100vw">
-  <link rel="canonical" href="https://nowdmc.com/">
-<meta property="og:image" content="https://nowdmc.com/images/og-nowdmc.jpg" />
-
-  <!-- Schema.org: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "NowDMC",
-    "url": "https://nowdmc.com/",
-    "logo": "https://nowdmc.com/images/logo-nowdmc.png",
-    "parentOrganization": {
-      "@type": "Organization",
-      "name": "Now Comms Asia",
-      "url": "https://www.nowcomms.asia"
-    },
-    "sameAs": ["https://www.nowcomms.asia"],
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "contactType": "Customer Service",
-      "email": "thai-dmc@nowcomms.asia",
-      "areaServed": ["TH","ID","SG"],
-      "availableLanguage": ["en"]
-    }]
-  }
-  </script>
-
-  <!-- TailwindCSS CDN (no build step for MVP) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Vimeo Player API -->
-  <script defer src="https://player.vimeo.com/api/player.js"></script>
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RM4L7LFDEV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config','G-RM4L7LFDEV');
-</script>
-
-  <style>
-    .fade-in { animation: fadeIn 0.7s ease-out both; }
-    @keyframes fadeIn { from{opacity:0; transform:translateY(4px)} to{opacity:1; transform:translateY(0)} }
-    .hero-video { width:100%; height:100%; object-fit:cover; display:block; background:#e5e7eb; }
-  </style>
-</head>
+  <!-- GA4 interaction tracking: place just before </body> -->
   <script>
-  // Email link clicks
-  document.addEventListener('click', (e) => {
-    const a = e.target.closest('a[href^="mailto:"]');
-    if (!a) return;
-    gtag('event','contact_click', {
-      method: 'mailto',
-      email: a.getAttribute('href').replace('mailto:','')
-    });
-  });
-
-  // Contact form submission (Formspree)
-  (function(){
-    const contactForm = document.querySelector('#contact form');
-    if (!contactForm) return;
-    contactForm.addEventListener('submit', () => {
-      gtag('event','generate_lead', { form: 'contact_form' });
-    });
-  })();
-
-  // Case tile opens
-  (function(){
-    document.querySelectorAll('#case-studies a[data-case]').forEach(a => {
-      a.addEventListener('click', () => {
-        gtag('event','select_content', {
-          content_type: 'case_study',
-          item_id: a.getAttribute('data-case')
+    document.addEventListener('DOMContentLoaded', () => {
+      // Email link clicks (mailto:)
+      document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[href^="mailto:"]');
+        if (!a || typeof gtag !== 'function') return;
+        gtag('event','contact_click', {
+          method: 'mailto',
+          email: a.getAttribute('href').replace('mailto:','')
         });
       });
-    });
-  })();
-</script>
-<body class="text-slate-900 bg-white">
 
-  <!-- Sticky Nav -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
-    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-2 font-semibold">
-        <img src="images/logo-nowdmc.png" alt="NowDMC logo" class="h-10 w-auto" />
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#destinations" class="hover:text-orange-600">Destinations</a>
-        <a href="#experiences" class="hover:text-orange-600">Experiences</a>
-        <a href="#case-studies" class="hover:text-orange-600">Case Studies</a>
-        <a href="#services" class="hover:text-orange-600">Services</a>
-        <a href="#about" class="hover:text-orange-600">About</a>
-        <a href="#contact" class="inline-flex items-center rounded-full bg-orange-600 px-4 py-2 text-white hover:bg-orange-700">Plan Your Event</a>
-      </nav>
-     <button
-  id="menuBtn"
-  class="md:hidden inline-flex items-center justify-center p-2 rounded border border-slate-300"
-  aria-label="Toggle menu"
-  aria-controls="mobileMenu"
-  aria-expanded="false"
->
-  ☰
-</button>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-100">
-      <nav class="px-4 py-3 space-y-2 text-sm">
-        <a href="#destinations" class="block">Destinations</a>
-        <a href="#experiences" class="block">Experiences</a>
-        <a href="#case-studies" class="block">Case Studies</a>
-        <a href="#services" class="block">Services</a>
-        <a href="#about" class="block">About</a>
-        <a href="#contact" class="block">Plan Your Event</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section id="home" class="relative isolate">
-    <div class="relative grid lg:grid-cols-2 items-stretch">
-      <div class="order-2 lg:order-1 p-8 md:p-16 flex flex-col justify-center gap-6 fade-in">
-        <h1 class="text-3xl md:text-5xl font-semibold leading-tight">
-          From Bangkok to Bali, we craft seamless destination experiences for global brands.
-        </h1>
-        <p class="text-slate-600">
-          NowDMC — a division of
-          <a href="https://www.nowcomms.asia" class="text-orange-700 underline" target="_blank" rel="noopener">Now Comms Asia</a>.
-        </p>
-        <div class="flex gap-3">
-          <a href="#contact" class="inline-flex items-center rounded-full bg-orange-600 px-5 py-3 text-white hover:bg-orange-700">Plan Your Event</a>
-          <a href="#destinations" class="inline-flex items-center rounded-full border px-5 py-3 border-slate-300 hover:border-orange-600">Explore Destinations</a>
-        </div>
-        <p class="text-sm text-slate-500">Motivation over Medium. Destination over Distance.</p>
-      </div>
-
-      <!-- Right column: Vimeo hero with image fallback -->
-      <div class="order-1 lg:order-2 min-h-[40vh] flex items-center justify-center">
-        <div style="padding:45.83% 0 0 0;position:relative;width:100%;min-height:320px; background:#000 url('images/hero-landing.jpg') center/cover no-repeat;">
-          <iframe
-            id="nowdmc-vimeo"
-            src="https://player.vimeo.com/video/1134448210?badge=0&amp;autopause=0&amp;player_id=nowdmc-vimeo&amp;app_id=58479&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;background=0&amp;title=0&amp;byline=0&amp;portrait=0&amp;playsinline=1"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            style="position:absolute;top:0;left:0;width:100%;height:100%;"
-            title="NowDMC"
-            loading="lazy">
-          </iframe>
-          <noscript>
-            <img src="images/hero-landing.jpg" alt="NowDMC destinations montage" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
-          </noscript>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- What We Do -->
-  <section class="py-16 md:py-24 border-t border-slate-100">
-    <div class="mx-auto max-w-7xl px-4">
-      <div class="grid md:grid-cols-3 gap-8 text-center">
-        <!-- Incentives -->
-        <div class="p-6">
-          <img src="images/incentives-icon.png" alt="Incentives – experience different" class="mx-auto h-24 w-auto mb-4" loading="lazy" decoding="async" />
-          <h3 class="font-semibold text-lg">Incentives</h3>
-          <p class="text-slate-600">Reward. Inspire. Motivate. Unforgettable journeys for top performers.</p>
-        </div>
-        <!-- Meetings & Conferences -->
-        <div class="p-6">
-          <img src="images/meeting-conference-icon.png" alt="Meetings and Conferences – connect different" class="mx-auto h-24 w-auto mb-4" loading="lazy" decoding="async" />
-          <h3 class="font-semibold text-lg">Meetings & Conferences</h3>
-          <p class="text-slate-600">Strategy and stage, seamlessly delivered across Thailand and Indonesia.</p>
-        </div>
-        <!-- Gala & Celebrations -->
-        <div class="p-6">
-          <img src="images/gala-celebration-icon.png" alt="Gala and Celebrations – celebrate different" class="mx-auto h-24 w-auto mb-4" loading="lazy" decoding="async" />
-          <h3 class="font-semibold text-lg">Gala & Celebrations</h3>
-          <p class="text-slate-600">Elegant evenings designed to connect and celebrate success.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Destinations -->
-  <section id="destinations" class="py-16 md:py-24 bg-slate-50">
-    <div class="mx-auto max-w-7xl px-4">
-      <div class="mb-10">
-        <h2 class="text-2xl md:text-4xl font-semibold">Destinations</h2>
-        <p class="text-slate-600 mt-2">Thailand and Indonesia — from city skylines to island sunsets and highland retreats.</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-6">
-        <!-- Thailand card -->
-        <a href="#thailand" class="group relative overflow-hidden rounded-2xl shadow-sm bg-white border border-slate-200">
-          <img src="images/dest-thailand.jpg" alt="Thailand rooftop and beach" class="h-64 w-full object-cover group-hover:scale-[1.02] transition" loading="lazy" decoding="async" />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">Thailand</h3>
-            <p class="text-slate-600">Bangkok • Phuket • Chiang Mai • Hua Hin</p>
-            <p class="mt-2 text-slate-600">Incentive perfection: rooftop galas, cultural immersion, private island dinners.</p>
-          </div>
-        </a>
-
-        <!-- Indonesia card -->
-        <a href="#indonesia" class="group relative overflow-hidden rounded-2xl shadow-sm bg-white border border-slate-200">
-          <img src="images/dest-indonesia.jpg" alt="Bali cliffs and Jakarta city" class="h-64 w-full object-cover group-hover:scale-[1.02] transition" loading="lazy" decoding="async" />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">Indonesia</h3>
-            <p class="text-slate-600">Bali • Jakarta • Bandung • Yogyakarta</p>
-            <p class="mt-2 text-slate-600">Islands of inspiration: clifftop luxury, creative highlands, and city energy.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Thailand detail anchor -->
-<section id="thailand" class="py-16 md:py-24">
-  <div class="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-10 items-center">
-
-    <!-- Left column: content and video -->
-    <div>
-      <h2 class="text-2xl md:text-4xl font-semibold">
-        Thailand — Where incentives inspire and experiences connect.
-      </h2>
-      <p class="text-slate-600 mt-4">
-        From the vibrant energy of Bangkok to the serenity of Chiang Mai and the beachside elegance of Phuket, Thailand delivers experiences that blend culture, creativity, and connection.
-      </p>
-
-      <div class="mt-6 space-y-2">
-        <p><strong>Bangkok:</strong> luxury hotels, rooftop venues, cultural depth.</p>
-        <p><strong>Phuket:</strong> beachside perfection for incentive rewards.</p>
-        <p><strong>Chiang Mai:</strong> mountain calm for CSR and wellness.</p>
-        <p><strong>Hua Hin:</strong> seaside sophistication, close to Bangkok.</p>
-      </div>
-
-      <div class="mt-8">
-        <h3 class="font-semibold text-lg">Incentive Travel in Thailand</h3>
-        <p class="text-slate-600 mt-2">
-          Private yacht lunches, temple-blessing ceremonies, rooftop celebrations, and CSR retreats — NowDMC manages every detail from logistics and entertainment to venue and on-ground operations.
-        </p>
-
-        <a href="#contact" class="mt-4 inline-flex items-center rounded-full bg-orange-600 px-5 py-3 text-white hover:bg-orange-700">
-          Start Planning Your Incentive
-        </a>
-
-        <!-- Click to Learn More video button -->
-        <div class="mt-6">
-          <button
-            id="playThailandVideo"
-            class="inline-flex items-center gap-2 rounded-full border border-orange-600 text-orange-600 px-5 py-3 hover:bg-orange-600 hover:text-white transition"
-          >
-            ▶️ Learn More
-          </button>
-        </div>
-
-        <!-- Modal with accessibility enhancements -->
-        <div id="thailandVideoModal"
-             class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
-             role="dialog"
-             aria-modal="true"
-             aria-labelledby="thailandVideoTitle">
-          <div class="relative w-full max-w-3xl bg-white rounded-xl overflow-hidden shadow-xl">
-            <button id="closeThailandVideo"
-                    class="absolute top-2 right-3 text-slate-600 text-2xl hover:text-orange-600"
-                    aria-label="Close video">&times;</button>
-            <h2 id="thailandVideoTitle" class="sr-only">Thailand Incentive Overview</h2>
-            <div style="padding:56.25% 0 0 0;position:relative;">
-              <iframe
-                id="thailandVimeo"
-                src="https://player.vimeo.com/video/1134531846?autoplay=0&loop=0&muted=0&autopause=0&playsinline=1&title=0&byline=0&portrait=0"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-                style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                title="Thailand Incentive Overview"
-                loading="lazy">
-              </iframe>
-            </div>
-          </div>
-        </div>
-      </div> <!-- closes mt-8 wrapper -->
-    </div> <!-- closes left column -->
-
-    <!-- Right column: images -->
-    <div class="grid gap-4">
-      <img src="images/th-thailand-1.jpg" alt="Bangkok rooftop gala" class="rounded-xl w-full h-64 object-cover" loading="lazy" decoding="async" />
-      <div class="grid grid-cols-2 gap-4">
-        <img src="images/th-thailand-2.jpg" alt="Thai cultural performance" class="rounded-xl h-48 w-full object-cover" loading="lazy" decoding="async" />
-        <img src="images/th-thailand-3.jpg" alt="Phuket beach dinner" class="rounded-xl h-48 w-full object-cover" loading="lazy" decoding="async" />
-      </div>
-    </div>
-
-  </div>
-</section>
-
-  <!-- Indonesia detail anchor -->
-  <section id="indonesia" class="py-16 md:py-24 bg-slate-50">
-    <div class="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-10 items-center">
-      <div class="order-2 lg:order-1 grid gap-4">
-        <img src="images/id-indonesia-1.jpg" alt="Bali Cliff Dinner" class="rounded-xl w-full h-64 object-cover" loading="lazy" decoding="async" />
-        <div class="grid grid-cols-2 gap-4">
-          <img src="images/id-indonesia-3.jpg" alt="Jakarta conference" class="rounded-xl h-48 w-full object-cover" loading="lazy" decoding="async" />
-          <img src="images/id-indonesia-2.jpg" alt="Bandung tea fields" class="rounded-xl h-48 w-full object-cover" loading="lazy" decoding="async" />
-        </div>
-      </div>
-      <div class="order-1 lg:order-2">
-        <h2 class="text-2xl md:text-4xl font-semibold">Indonesia — Islands of Inspiration.</h2>
-        <p class="text-slate-600 mt-4">From the energy of Jakarta to the tranquillity of Bali and the cool creativity of Bandung, Indonesia offers diversity, culture, and innovation for every event.</p>
-        <div class="mt-6 space-y-2">
-          <p><strong>Bali:</strong> clifftop luxury, beach galas, wellness escapes.</p>
-          <p><strong>Jakarta:</strong> modern business hubs and premium venues.</p>
-          <p><strong>Bandung:</strong> rising MICE destination with creative flair and mountain air.</p>
-          <p><strong>Yogyakarta:</strong> cultural depth and meaningful CSR extensions.</p>
-        </div>
-        <a href="#contact" class="mt-6 inline-flex items-center rounded-full bg-orange-600 px-5 py-3 text-white hover:bg-orange-700">Plan Your Indonesia Event</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experiences -->
-  <section id="experiences" class="py-16 md:py-24">
-    <div class="mx-auto max-w-7xl px-4">
-      <div class="mb-10">
-        <h2 class="text-2xl md:text-4xl font-semibold">Every experience, expertly orchestrated.</h2>
-        <p class="text-slate-600 mt-2">Incentives, meetings, galas, CSR and wellness — connecting business goals with emotional impact.</p>
-      </div>
-      <div class="grid md:grid-cols-5 gap-4">
-        <div class="rounded-xl border p-4 bg-white">
-          <h3 class="font-semibold">Incentives & Rewards</h3>
-          <p class="text-slate-600 text-sm mt-1">Luxury travel, authentic culture, shared discovery.</p>
-        </div>
-        <div class="rounded-xl border p-4 bg-white">
-          <h3 class="font-semibold">Meetings & Conferences</h3>
-          <p class="text-slate-600 text-sm mt-1">Creative staging and flawless execution.</p>
-        </div>
-        <div class="rounded-xl border p-4 bg-white">
-          <h3 class="font-semibold">Galas & Celebrations</h3>
-          <p class="text-slate-600 text-sm mt-1">Elegant evenings and cultural showcases.</p>
-        </div>
-        <div class="rounded-xl border p-4 bg-white">
-          <h3 class="font-semibold">CSR & Team</h3>
-          <p class="text-slate-600 text-sm mt-1">Purpose-driven engagement with impact.</p>
-        </div>
-        <div class="rounded-xl border p-4 bg-white">
-          <h3 class="font-semibold">Wellness & Retreats</h3>
-          <p class="text-slate-600 text-sm mt-1">Leadership renewal in nature’s calm.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Case Studies (tiles reveal details) -->
-  <section id="case-studies" class="py-16 md:py-24 bg-slate-50">
-    <div class="mx-auto max-w-7xl px-4">
-      <div class="mb-10">
-        <h2 class="text-2xl md:text-4xl font-semibold">Real destinations. Real results.</h2>
-        <p class="text-slate-600 mt-2">
-          Explore how global brands trust NowDMC — powered by 
-          <a href="https://www.nowcomms.asia" target="_blank" rel="noopener" class="underline text-orange-700">Now Comms Asia</a> — 
-          to deliver impact across Thailand and Indonesia.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- SolarWinds Bali -->
-        <div class="rounded-2xl overflow-hidden border bg-white">
-          <a href="#case-solarwinds-bali" data-case="case-solarwinds-bali">
-            <img src="images/case-solarwinds-bali-1.webp" alt="SolarWinds Transform Partner Summit, Bali" class="h-48 w-full object-cover group-hover:scale-[1.02] transition" loading="lazy" decoding="async" />
-          </a>
-          <div class="p-5">
-            <h3 class="font-semibold">
-              <a href="#case-solarwinds-bali" data-case="case-solarwinds-bali" class="hover:text-orange-700">SolarWinds Transform Partner Summit</a>
-            </h3>
-            <p class="text-slate-600 text-sm">Three-day partner conference and awards programme in Bali.</p>
-          </div>
-        </div>
-
-        <!-- Canadian FMCG Phuket -->
-        <div class="rounded-2xl overflow-hidden border bg-white">
-          <a href="#case-fmcg-phuket" data-case="case-fmcg-phuket">
-            <img src="images/case-fmcg-phuket-1.jpg" alt="Luxury cruiser off a private island in Phuket" class="h-48 w-full object-cover group-hover:scale-[1.02] transition" loading="lazy" decoding="async" />
-          </a>
-          <div class="p-5">
-            <h3 class="font-semibold">
-              <a href="#case-fmcg-phuket" data-case="case-fmcg-phuket" class="hover:text-orange-700">Canadian FMCG Incentive — Phuket</a>
-            </h3>
-            <p class="text-slate-600 text-sm">Private island gala and luxury reward journey.</p>
-          </div>
-        </div>
-
-        <!-- Appsflyer Bangkok (Coming Soon) -->
-        <div class="rounded-2xl overflow-hidden border bg-white relative group">
-          <a href="#case-appsflyer-bangkok" data-case="case-appsflyer-bangkok">
-            <img src="images/th-thailand-1.jpg" alt="Appsflyer Bangkok Summit" class="h-48 w-full object-cover opacity-90 group-hover:opacity-100 transition" loading="lazy" decoding="async" />
-          </a>
-          <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-            <span class="text-white text-sm uppercase tracking-wide">Coming Soon</span>
-          </div>
-          <div class="p-5">
-            <h3 class="font-semibold">Appsflyer Bangkok Experience</h3>
-            <p class="text-slate-600 text-sm">Regional partner summit and creative technology showcase.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Case Study: SolarWinds Transform Partner Summit APJ 2024 – Bali -->
-  <section id="case-solarwinds-bali" class="case-detail hidden py-20 border-t border-slate-100 bg-white">
-    <div class="mx-auto max-w-5xl px-4">
-      <div class="mb-10 text-center">
-        <h2 class="text-3xl md:text-5xl font-semibold mb-3 text-orange-700">SolarWinds Transform Partner Summit APJ 2024 — Bali</h2>
-        <h3 class="text-xl md:text-2xl font-medium text-slate-700">Transforming Partnerships in Paradise</h3>
-        <p class="mt-3 max-w-3xl mx-auto text-slate-600">A three-day regional summit uniting partners from across Asia Pacific and Japan — combining business focus with Balinese warmth and flawless event precision.</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8 items-start mb-12">
-        <div>
-          <h4 class="text-lg font-semibold text-slate-900 mb-2">Challenge</h4>
-          <p class="text-slate-600">SolarWinds sought to host its flagship APJ Partner Summit as an immersive experience that both celebrated top partners and strengthened regional alignment.</p>
-        </div>
-        <div>
-          <h4 class="text-lg font-semibold text-slate-900 mb-2">Solution</h4>
-          <p class="text-slate-600">NowDMC managed end-to-end destination logistics and event operations for more than 140 regional attendees at the Grand Hyatt Bali. Guests were greeted with cold towels, fresh juices, and traditional Balinese welcomes before a buffet dinner, gamelan performance, and fire dance spectacle.</p>
-        </div>
-      </div>
-
-      <div class="mb-12">
-        <h4 class="text-lg font-semibold text-slate-900 mb-2">Result</h4>
-        <p class="text-slate-600">Months of planning led to three days of smooth execution — and a delighted client.</p>
-      </div>
-
-      <div class="mb-12">
-        <div style="padding:56.25% 0 0 0;position:relative; border-radius: 0.75rem; overflow:hidden;">
-          <iframe
-            src="https://player.vimeo.com/video/1044228587?autoplay=0&loop=0&muted=0&title=0&byline=0&portrait=0"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-            style="position:absolute;top:0;left:0;width:100%;height:100%;"
-            title="SolarWinds Transform Partner Summit 2024 – Bali"
-            loading="lazy">
-          </iframe>
-        </div>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-4">
-        <img src="images/case-solarwinds-bali-1.webp" alt="Balinese welcome at Grand Hyatt entrance" class="rounded-xl w-full h-72 object-cover" loading="lazy" decoding="async" />
-        <img src="images/case-solarwinds-bali-2.webp" alt="Fire dance performance at Welcome Dinner" class="rounded-xl w-full h-72 object-cover" loading="lazy" decoding="async" />
-        <img src="images/case-solarwinds-bali-3.webp" alt="Executive Plenary with LED stage" class="rounded-xl w-full h-72 object-cover" loading="lazy" decoding="async" />
-      </div>
-
-      <div class="text-center mt-12">
-        <button class="case-close inline-flex items-center rounded-full border px-6 py-3 hover:bg-slate-50">← Back to Case Studies</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Case Study: Canadian FMCG Incentive – Phuket -->
-  <section id="case-fmcg-phuket" class="case-detail hidden py-20 border-t border-slate-100 bg-white">
-    <div class="mx-auto max-w-5xl px-4">
-      <div class="mb-10 text-center">
-        <h2 class="text-3xl md:text-5xl font-semibold mb-3 text-orange-700">Canadian FMCG Incentive – Phuket</h2>
-        <h3 class="text-xl md:text-2xl font-medium text-slate-700">A Private Island Reward to Remember</h3>
-        <p class="mt-3 max-w-3xl mx-auto text-slate-600">An exclusive four-day reward trip blending island adventure, Thai culture, and NowDMC precision logistics.</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8 items-start mb-12">
-        <div>
-          <h4 class="text-lg font-semibold text-slate-900 mb-2">Challenge</h4>
-          <p class="text-slate-600">A leading Canadian FMCG company wanted to celebrate its top regional performers with a once-in-a-lifetime incentive trip.</p>
-        </div>
-        <div>
-          <h4 class="text-lg font-semibold text-slate-900 mb-2">Solution</h4>
-          <p class="text-slate-600">NowDMC curated the entire journey, from personalised airport greetings to a private island gala accessible only by boat.</p>
-        </div>
-      </div>
-
-      <div class="mb-12">
-        <h4 class="text-lg font-semibold text-slate-900 mb-2">Result</h4>
-        <p class="text-slate-600">An unforgettable experience with a 98% satisfaction score from guests, and multiple follow-up groups re-booking through NowDMC.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-4">
-        <img src="images/case-fmcg-phuket-1.jpg" alt="Luxury cruiser off a private island in Phuket" class="rounded-xl w-full h-72 object-cover" loading="lazy" decoding="async" />
-        <img src="images/case-fmcg-phuket-2.jpg" alt="Traditional Thai dance welcome" class="rounded-xl w-full h-72 object-cover" loading="lazy" decoding="async" />
-        <img src="images/case-fmcg-phuket-3.jpg" alt="Tuk Tuk tour of Bangkok" class="rounded-xl w-full h-72 object-cover" loading="lazy" decoding="async" />
-      </div>
-
-      <div class="text-center mt-12">
-        <button class="case-close inline-flex items-center rounded-full border px-6 py-3 hover:bg-slate-50">← Back to Case Studies</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-16 md:py-24">
-    <div class="mx-auto max-w-7xl px-4">
-      <div class="mb-10">
-        <h2 class="text-2xl md:text-4xl font-semibold">From concept to curtain call.</h2>
-        <p class="text-slate-600 mt-2">Backed by <a href="https://www.nowcomms.asia" class="text-orange-700 underline" target="_blank" rel="noopener">Now Comms Asia</a>, we provide full-service destination management.</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="rounded-xl border p-5 bg-white">
-          <h3 class="font-semibold">Concept & Design</h3>
-          <p class="text-slate-600 text-sm mt-1">Ideas shaped around purpose and audience.</p>
-        </div>
-        <div class="rounded-xl border p-5 bg-white">
-          <h3 class="font-semibold">Venue & Accommodation</h3>
-          <p class="text-slate-600 text-sm mt-1">Sourcing, contracting, and management.</p>
-        </div>
-        <div class="rounded-xl border p-5 bg-white">
-          <h3 class="font-semibold">Travel & Ground Logistics</h3>
-          <p class="text-slate-600 text-sm mt-1">Transfers, scheduling, VIP handling.</p>
-        </div>
-        <div class="rounded-xl border p-5 bg-white">
-          <h3 class="font-semibold">Production & AV</h3>
-          <p class="text-slate-600 text-sm mt-1">Creative technology and seamless delivery.</p>
-        </div>
-        <div class="rounded-xl border p-5 bg-white">
-          <h3 class="font-semibold">Cultural & Entertainment</h3>
-          <p class="text-slate-600 text-sm mt-1">Authentic performances and storytelling.</p>
-        </div>
-        <div class="rounded-xl border p-5 bg-white">
-          <h3 class="font-semibold">CSR & Wellness</h3>
-          <p class="text-slate-600 text-sm mt-1">Impactful programmes with meaning.</p>
-        </div>
-        <div class="rounded-xl border p-5 bg-white md:col-span-3">
-          <h3 class="font-semibold">Budget & ROI Management</h3>
-          <p class="text-slate-600 text-sm mt-1">Transparent financials and measurable outcomes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="py-16 md:py-24 bg-slate-50">
-    <div class="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 class="text-2xl md:text-4xl font-semibold">A division of Now Comms Asia.</h2>
-        <p class="text-slate-600 mt-4">NowDMC is the destination management arm of <a href="https://www.nowcomms.asia" class="text-orange-700 underline" target="_blank" rel="noopener">Now Comms Asia</a> — a regional B2B marketing, events, and creative-tech agency headquartered in Singapore with teams in Thailand, Indonesia, Malaysia, and Japan.</p>
-        <p class="text-slate-600 mt-2">We bring global brand experience and local expertise together to deliver corporate events that are seamless, creative, and culturally resonant.</p>
-      </div>
-      <div class="grid grid-cols-2 gap-4">
-        <img src="images/about-1.jpg" alt="Bangkok river gala" class="rounded-xl h-40 w-full object-cover" loading="lazy" decoding="async" />
-        <img src="images/about-2.jpg" alt="Bali clifftop venue" class="rounded-xl h-40 w-full object-cover" loading="lazy" decoding="async" />
-        <img src="images/about-3.jpg" alt="Conference LED stage" class="rounded-xl h-40 w-full object-cover" loading="lazy" decoding="async" />
-        <img src="images/about-4.jpg" alt="CSR activity" class="rounded-xl h-40 w-full object-cover" loading="lazy" decoding="async" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-16 md:py-24">
-    <div class="mx-auto max-w-3xl px-4">
-      <div class="text-center mb-8">
-        <h2 class="text-2xl md:text-4xl font-semibold">Let’s design your next destination experience.</h2>
-        <p class="text-slate-600 mt-2">Share a few details and we’ll start shaping the perfect event in Thailand or Indonesia.</p>
-      </div>
-
-      <!-- Formspree kept as requested -->
-      <form action="https://formspree.io/f/mzzknwkd" method="POST" class="grid gap-4">
-        <div class="grid md:grid-cols-2 gap-4">
-          <input class="border rounded-lg p-3" name="name" placeholder="Name" required />
-          <input class="border rounded-lg p-3" name="company" placeholder="Company" />
-        </div>
-        <div class="grid md:grid-cols-2 gap-4">
-          <input class="border rounded-lg p-3" name="email" type="email" placeholder="Email" required />
-          <input class="border rounded-lg p-3" name="country" placeholder="Country" />
-        </div>
-        <div class="grid md:grid-cols-2 gap-4">
-          <select class="border rounded-lg p-3" name="event_type">
-            <option value="">Event Type</option>
-            <option>Incentive</option>
-            <option>Conference/Meeting</option>
-            <option>Gala/Celebration</option>
-            <option>CSR/Team</option>
-            <option>Wellness/Retreat</option>
-          </select>
-          <select class="border rounded-lg p-3" name="destination">
-            <option value="">Destination</option>
-            <option>Thailand</option>
-            <option>Indonesia</option>
-            <option>Unsure</option>
-          </select>
-        </div>
-        <div class="grid md:grid-cols-2 gap-4">
-          <input class="border rounded-lg p-3" name="dates" placeholder="Estimated Dates" />
-          <input class="border rounded-lg p-3" name="group_size" placeholder="Group Size / Budget" />
-        </div>
-        <textarea class="border rounded-lg p-3" name="message" rows="5" placeholder="Tell us about your goals and any must-haves…"></textarea>
-        <button class="inline-flex justify-center rounded-full bg-orange-600 px-6 py-3 text-white hover:bg-orange-700">Submit Enquiry</button>
-      </form>
-
-      <div class="text-center mt-6 text-slate-600 space-y-1">
-        <div>Prefer to talk?</div>
-        <div>🇹🇭 Thailand: <a href="mailto:thai-dmc@nowcomms.asia" class="underline">thai-dmc@nowcomms.asia</a></div>
-        <div>🇮🇩 Indonesia: <a href="mailto:indo-dmc@nowcomms.asia" class="underline">indo-dmc@nowcomms.asia</a></div>
-        <div>Offices in Bangkok, Bali, Bandung, Jakarta & Singapore</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-t border-slate-100 py-10">
-    <div class="mx-auto max-w-7xl px-4 grid md:grid-cols-4 gap-6 items-start">
-      <!-- Left: NowDMC -->
-      <div class="flex flex-col items-start">
-        <img src="images/logo-nowdmc.png" alt="NowDMC logo" class="h-10 w-auto mb-3" />
-        <p class="text-slate-600 text-sm">
-          the destination management arm of
-          <a href="https://www.nowcomms.asia" target="_blank" rel="noopener" class="underline text-orange-700">Now Comms Asia</a>.
-        </p>
-      </div>
-
-      <!-- Column 2: Destinations -->
-      <div class="text-sm">
-        <h4 class="font-semibold mb-2">Destinations</h4>
-        <ul class="space-y-1">
-          <li><a href="#thailand" class="hover:text-orange-700">Thailand</a></li>
-          <li><a href="#indonesia" class="hover:text-orange-700">Indonesia</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3: Connect -->
-      <div class="text-sm">
-        <h4 class="font-semibold mb-2">Connect</h4>
-        <ul class="space-y-1">
-          <li><a href="#experiences" class="hover:text-orange-700">Experiences</a></li>
-          <li><a href="#services" class="hover:text-orange-700">Services</a></li>
-          <li><a href="#contact" class="hover:text-orange-700">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Right: Now Comms Asia logo -->
-      <div class="flex justify-end md:justify-end items-start">
-        <a href="https://www.nowcomms.asia" target="_blank" rel="noopener">
-          <img src="images/nowcommsasia-logo.png" alt="Now Comms Asia logo" class="h-20 w-auto hover:opacity-90 transition" loading="lazy" decoding="async" />
-        </a>
-      </div>
-    </div>
-
-    <div class="mx-auto max-w-7xl px-4 mt-8 text-xs text-slate-500 text-center md:text-left">
-      © <span id="year"></span> Now Comms Asia. All rights reserved.
-    </div>
-  </footer>
-
-  <!-- Thailand modal player controls -->
-  <script>
-    // Mobile menu toggle (with accessibility)
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-
-menuBtn?.addEventListener('click', () => {
-  const isHidden = mobileMenu.classList.toggle('hidden');
-  const expanded = !isHidden;
-  menuBtn.setAttribute('aria-expanded', String(expanded));
-});
-
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Thailand modal + Vimeo control (rewind on open/close)
-    window.addEventListener('load', () => {
-      const playBtn = document.getElementById('playThailandVideo');
-      const modal   = document.getElementById('thailandVideoModal');
-      const closeBtn= document.getElementById('closeThailandVideo');
-      const iframe  = document.getElementById('thailandVimeo');
-
-      let player = null;
-      if (window.Vimeo && iframe) player = new Vimeo.Player(iframe);
-
-      function openModal() {
-        modal.classList.remove('hidden');
-        if (!player) return;
-        player.setCurrentTime(0).then(()=>player.play()).catch(()=>{});
+      // Contact form submission (Formspree)
+      const contactForm = document.querySelector('#contact form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', () => {
+          if (typeof gtag !== 'function') return;
+          gtag('event','generate_lead', { form: 'contact_form' });
+        });
       }
 
-      function closeModal(){
-        modal.classList.add('hidden');
-        if (!player) return;
-        player.pause().catch(()=>{});
-        player.setCurrentTime(0).catch(()=>{});
-      }
-
-      playBtn?.addEventListener('click', openModal);
-      closeBtn?.addEventListener('click', closeModal);
-      modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-    });
-
-    // Case-studies click-to-reveal
-    (function(){
-      const grid = document.getElementById('case-studies');
-      const details = Array.from(document.querySelectorAll('.case-detail'));
-
-      function showCase(id, pushHash = true) {
-        details.forEach(sec => sec.classList.add('hidden'));
-        const target = document.getElementById(id);
-        if (!target) return;
-        target.classList.remove('hidden');
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        if (pushHash) location.hash = id;
-      }
-
-      function hideAllCases() {
-        details.forEach(sec => sec.classList.add('hidden'));
-        grid?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.replaceState(null, '', location.pathname + location.search);
-      }
-
+      // Case tile opens
       document.querySelectorAll('#case-studies a[data-case]').forEach(a => {
-        a.addEventListener('click', (e) => {
-          const id = a.getAttribute('data-case');
-          if (!id) return;
-          e.preventDefault();
-          showCase(id);
+        a.addEventListener('click', () => {
+          if (typeof gtag !== 'function') return;
+          gtag('event','select_content', {
+            content_type: 'case_study',
+            item_id: a.getAttribute('data-case')
+          });
         });
       });
-
-      document.querySelectorAll('.case-detail .case-close').forEach(btn => {
-        btn.addEventListener('click', hideAllCases);
-      });
-
-      window.addEventListener('load', () => {
-        const id = (location.hash || '').replace('#', '');
-        if (id && document.getElementById(id)?.classList.contains('case-detail')) {
-          showCase(id, false);
-        }
-      });
-
-      window.addEventListener('hashchange', () => {
-        const id = (location.hash || '').replace('#', '');
-        if (!id) { hideAllCases(); return; }
-        if (document.getElementById(id)?.classList.contains('case-detail')) {
-          showCase(id, false);
-        }
-      });
-    })();
+    });
   </script>
 </body>
 </html>
-
-
-</body>
-</html>
-
-
-
