@@ -1,0 +1,6 @@
+# robots.txt for nowdmc.com
+User-agent: *
+Allow: /
+
+# Point crawlers to your XML sitemap
+Sitemap: https://nowdmc.com/sitemap.xml
