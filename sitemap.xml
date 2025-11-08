@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Single-page site: only list canonical URLs (no #anchors) -->
+  <url>
+    <loc>https://nowdmc.com/</loc>
+    <lastmod>2025-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- Helpful images for richer indexing -->
+    <image:image>
+      <image:loc>https://nowdmc.com/images/og-nowdmc.jpg</image:loc>
+      <image:title>NowDMC — Destination Management</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nowdmc.com/images/hero-landing.jpg</image:loc>
+      <image:title>NowDMC Hero Montage</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nowdmc.com/images/logo-nowdmc.png</image:loc>
+      <image:title>NowDMC Logo</image:title>
+    </image:image>
+  </url>
+</urlset>
