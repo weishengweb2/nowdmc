@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NowDMC — Destination Management in Thailand & Indonesia</title>
@@ -19,6 +22,9 @@
   <link rel="preconnect" href="https://player.vimeo.com" />
   <link rel="preconnect" href="https://i.vimeocdn.com" />
   <link rel="preconnect" href="https://f.vimeocdn.com" />
+  <link rel="preload" as="image" href="images/hero-landing.jpg" imagesrcset="images/hero-landing.jpg 1600w" imagesizes="100vw">
+  <link rel="canonical" href="https://nowdmc.com/">
+<meta property="og:image" content="https://nowdmc.com/images/og-nowdmc.jpg" />
 
   <!-- Schema.org: Organization -->
   <script type="application/ld+json">
@@ -50,14 +56,14 @@
   <!-- Vimeo Player API -->
   <script defer src="https://player.vimeo.com/api/player.js"></script>
 
-  <!-- GA4 (replace G-XXXXXXXXXX with your real ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config','G-RM4L7LFDEV');
-  </script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RM4L7LFDEV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config','G-RM4L7LFDEV');
+</script>
 
   <style>
     .fade-in { animation: fadeIn 0.7s ease-out both; }
@@ -65,6 +71,38 @@
     .hero-video { width:100%; height:100%; object-fit:cover; display:block; background:#e5e7eb; }
   </style>
 </head>
+  <script>
+  // Email link clicks
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="mailto:"]');
+    if (!a) return;
+    gtag('event','contact_click', {
+      method: 'mailto',
+      email: a.getAttribute('href').replace('mailto:','')
+    });
+  });
+
+  // Contact form submission (Formspree)
+  (function(){
+    const contactForm = document.querySelector('#contact form');
+    if (!contactForm) return;
+    contactForm.addEventListener('submit', () => {
+      gtag('event','generate_lead', { form: 'contact_form' });
+    });
+  })();
+
+  // Case tile opens
+  (function(){
+    document.querySelectorAll('#case-studies a[data-case]').forEach(a => {
+      a.addEventListener('click', () => {
+        gtag('event','select_content', {
+          content_type: 'case_study',
+          item_id: a.getAttribute('data-case')
+        });
+      });
+    });
+  })();
+</script>
 <body class="text-slate-900 bg-white">
 
   <!-- Sticky Nav -->
@@ -81,7 +119,15 @@
         <a href="#about" class="hover:text-orange-600">About</a>
         <a href="#contact" class="inline-flex items-center rounded-full bg-orange-600 px-4 py-2 text-white hover:bg-orange-700">Plan Your Event</a>
       </nav>
-      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded border border-slate-300" aria-label="Open menu">☰</button>
+     <button
+  id="menuBtn"
+  class="md:hidden inline-flex items-center justify-center p-2 rounded border border-slate-300"
+  aria-label="Toggle menu"
+  aria-controls="mobileMenu"
+  aria-expanded="false"
+>
+  ☰
+</button>
     </div>
     <!-- Mobile menu -->
     <div id="mobileMenu" class="md:hidden hidden border-t border-slate-100">
@@ -116,7 +162,7 @@
 
       <!-- Right column: Vimeo hero with image fallback -->
       <div class="order-1 lg:order-2 min-h-[40vh] flex items-center justify-center">
-        <div style="padding:45.83% 0 0 0;position:relative; width:100%; background: #000 url('images/hero-landing.jpg') center/cover no-repeat;">
+        <div style="padding:45.83% 0 0 0;position:relative;width:100%;min-height:320px; background:#000 url('images/hero-landing.jpg') center/cover no-repeat;">
           <iframe
             id="nowdmc-vimeo"
             src="https://player.vimeo.com/video/1134448210?badge=0&amp;autopause=0&amp;player_id=nowdmc-vimeo&amp;app_id=58479&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;background=0&amp;title=0&amp;byline=0&amp;portrait=0&amp;playsinline=1"
@@ -194,64 +240,84 @@
   </section>
 
   <!-- Thailand detail anchor -->
-  <section id="thailand" class="py-16 md:py-24">
-    <div class="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-10 items-center">
+<section id="thailand" class="py-16 md:py-24">
+  <div class="mx-auto max-w-7xl px-4 grid lg:grid-cols-2 gap-10 items-center">
 
-      <!-- Left column: content and video -->
-      <div>
-        <h2 class="text-2xl md:text-4xl font-semibold">Thailand — Where incentives inspire and experiences connect.</h2>
-        <p class="text-slate-600 mt-4">From the vibrant energy of Bangkok to the serenity of Chiang Mai and the beachside elegance of Phuket, Thailand delivers experiences that blend culture, creativity, and connection.</p>
+    <!-- Left column: content and video -->
+    <div>
+      <h2 class="text-2xl md:text-4xl font-semibold">
+        Thailand — Where incentives inspire and experiences connect.
+      </h2>
+      <p class="text-slate-600 mt-4">
+        From the vibrant energy of Bangkok to the serenity of Chiang Mai and the beachside elegance of Phuket, Thailand delivers experiences that blend culture, creativity, and connection.
+      </p>
 
-        <div class="mt-6 space-y-2">
-          <p><strong>Bangkok:</strong> luxury hotels, rooftop venues, cultural depth.</p>
-          <p><strong>Phuket:</strong> beachside perfection for incentive rewards.</p>
-          <p><strong>Chiang Mai:</strong> mountain calm for CSR and wellness.</p>
-          <p><strong>Hua Hin:</strong> seaside sophistication, close to Bangkok.</p>
-        </div>
-
-        <div class="mt-8">
-          <h3 class="font-semibold text-lg">Incentive Travel in Thailand</h3>
-          <p class="text-slate-600 mt-2">Private yacht lunches, temple-blessing ceremonies, rooftop celebrations, and CSR retreats — NowDMC manages every detail from logistics and entertainment to venue and on-ground operations.</p>
-
-          <a href="#contact" class="mt-4 inline-flex items-center rounded-full bg-orange-600 px-5 py-3 text-white hover:bg-orange-700">Start Planning Your Incentive</a>
-
-          <!-- Click to Learn More video button -->
-          <div class="mt-6">
-            <button id="playThailandVideo" class="inline-flex items-center gap-2 rounded-full border border-orange-600 text-orange-600 px-5 py-3 hover:bg-orange-600 hover:text-white transition">▶️ Learn More</button>
-          </div>
-
-          <!-- Modal -->
-          <div id="thailandVideoModal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-            <div class="relative w-full max-w-3xl bg-white rounded-xl overflow-hidden shadow-xl">
-              <button id="closeThailandVideo" class="absolute top-2 right-3 text-slate-600 text-2xl hover:text-orange-600" aria-label="Close video">&times;</button>
-              <div style="padding:56.25% 0 0 0;position:relative;">
-                <iframe
-                  id="thailandVimeo"
-                  src="https://player.vimeo.com/video/1134531846?autoplay=0&loop=0&muted=0&autopause=0&playsinline=1&title=0&byline=0&portrait=0"
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen
-                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                  title="Thailand Incentive Overview"
-                  loading="lazy">
-                </iframe>
-              </div>
-            </div>
-          </div>
-        </div> <!-- closes mt-8 wrapper -->
-      </div> <!-- closes left column -->
-
-      <!-- Right column: images -->
-      <div class="grid gap-4">
-        <img src="images/th-thailand-1.jpg" alt="Bangkok rooftop gala" class="rounded-xl w-full h-64 object-cover" loading="lazy" decoding="async" />
-        <div class="grid grid-cols-2 gap-4">
-          <img src="images/th-thailand-2.jpg" alt="Thai cultural performance" class="rounded-xl h-48 w-full object-cover" loading="lazy" decoding="async" />
-          <img src="images/th-thailand-3.jpg" alt="Phuket beach dinner" class="rounded-xl h-48 w-full object-cover" loading="lazy" decoding="async" />
-        </div>
+      <div class="mt-6 space-y-2">
+        <p><strong>Bangkok:</strong> luxury hotels, rooftop venues, cultural depth.</p>
+        <p><strong>Phuket:</strong> beachside perfection for incentive rewards.</p>
+        <p><strong>Chiang Mai:</strong> mountain calm for CSR and wellness.</p>
+        <p><strong>Hua Hin:</strong> seaside sophistication, close to Bangkok.</p>
       </div>
 
+      <div class="mt-8">
+        <h3 class="font-semibold text-lg">Incentive Travel in Thailand</h3>
+        <p class="text-slate-600 mt-2">
+          Private yacht lunches, temple-blessing ceremonies, rooftop celebrations, and CSR retreats — NowDMC manages every detail from logistics and entertainment to venue and on-ground operations.
+        </p>
+
+        <a href="#contact" class="mt-4 inline-flex items-center rounded-full bg-orange-600 px-5 py-3 text-white hover:bg-orange-700">
+          Start Planning Your Incentive
+        </a>
+
+        <!-- Click to Learn More video button -->
+        <div class="mt-6">
+          <button
+            id="playThailandVideo"
+            class="inline-flex items-center gap-2 rounded-full border border-orange-600 text-orange-600 px-5 py-3 hover:bg-orange-600 hover:text-white transition"
+          >
+            ▶️ Learn More
+          </button>
+        </div>
+
+        <!-- Modal with accessibility enhancements -->
+        <div id="thailandVideoModal"
+             class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="thailandVideoTitle">
+          <div class="relative w-full max-w-3xl bg-white rounded-xl overflow-hidden shadow-xl">
+            <button id="closeThailandVideo"
+                    class="absolute top-2 right-3 text-slate-600 text-2xl hover:text-orange-600"
+                    aria-label="Close video">&times;</button>
+            <h2 id="thailandVideoTitle" class="sr-only">Thailand Incentive Overview</h2>
+            <div style="padding:56.25% 0 0 0;position:relative;">
+              <iframe
+                id="thailandVimeo"
+                src="https://player.vimeo.com/video/1134531846?autoplay=0&loop=0&muted=0&autopause=0&playsinline=1&title=0&byline=0&portrait=0"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                title="Thailand Incentive Overview"
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div> <!-- closes mt-8 wrapper -->
+    </div> <!-- closes left column -->
+
+    <!-- Right column: images -->
+    <div class="grid gap-4">
+      <img src="images/th-thailand-1.jpg" alt="Bangkok rooftop gala" class="rounded-xl w-full h-64 object-cover" loading="lazy" decoding="async" />
+      <div class="grid grid-cols-2 gap-4">
+        <img src="images/th-thailand-2.jpg" alt="Thai cultural performance" class="rounded-xl h-48 w-full object-cover" loading="lazy" decoding="async" />
+        <img src="images/th-thailand-3.jpg" alt="Phuket beach dinner" class="rounded-xl h-48 w-full object-cover" loading="lazy" decoding="async" />
+      </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- Indonesia detail anchor -->
   <section id="indonesia" class="py-16 md:py-24 bg-slate-50">
@@ -607,10 +673,15 @@
 
   <!-- Thailand modal player controls -->
   <script>
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn?.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
+    // Mobile menu toggle (with accessibility)
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+menuBtn?.addEventListener('click', () => {
+  const isHidden = mobileMenu.classList.toggle('hidden');
+  const expanded = !isHidden;
+  menuBtn.setAttribute('aria-expanded', String(expanded));
+});
 
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -694,4 +765,5 @@
   </script>
 </body>
 </html>
+
 
