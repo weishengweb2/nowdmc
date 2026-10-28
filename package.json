@@ -1,0 +1,9 @@
+{
+  "name": "nowdmc-website",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i assets/input.css -o assets/site.css --content './**/*.html' --minify",
+    "test": "node tests/site.test.cjs"
+  },
+  "devDependencies": { "tailwindcss": "3.4.17" }
+}
